@@ -1,0 +1,18 @@
+[configuration]
+
+entry_symbol = "example_library_init"
+compatibility_minimum = "4.1"
+reloadable = true
+
+[libraries]
+
+android.debug.arm64 = "res://addons/godotskeletontexture/.bin/android/template_debug/arm64/libgodotskeletontexture.so"
+android.release.arm64 = "res://addons/godotskeletontexture/.bin/android/template_release/arm64/libgodotskeletontexture.so"
+android.debug.x86_64 = "res://addons/godotskeletontexture/.bin/android/template_debug/x86_64/libgodotskeletontexture.so"
+android.release.x86_64 = "res://addons/godotskeletontexture/.bin/android/template_release/x86_64/libgodotskeletontexture.so"
+macos.debug = "res://addons/godotskeletontexture/.bin/macos/template_debug/libgodotskeletontexture.macos.framework"
+macos.release = "res://addons/godotskeletontexture/.bin/macos/template_release/libgodotskeletontexture.macos.framework"
+windows.debug.x86_64 = "res://addons/godotskeletontexture/.bin/windows/template_debug/x86_64/libgodotskeletontexture.dll"
+windows.release.x86_64 = "res://addons/godotskeletontexture/.bin/windows/template_release/x86_64/libgodotskeletontexture.dll"
+linux.debug.x86_64 = "res://addons/godotskeletontexture/.bin/linux/template_debug/x86_64/libgodotskeletontexture.so"
+linux.release.x86_64 = "res://addons/godotskeletontexture/.bin/linux/template_release/x86_64/libgodotskeletontexture.so"
