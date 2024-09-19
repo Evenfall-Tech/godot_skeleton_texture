@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://brp5qtoikpttb"]
+[gd_scene load_steps=3 format=3 uid="uid://brp5qtoikpttb"]
 
-[ext_resource type="Texture2D" uid="uid://dm814w4hmq802" path="res://icon.svg" id="1_skuhd"]
+[ext_resource type="Script" path="res://main.gd" id="1_vn6ed"]
+[ext_resource type="PackedScene" uid="uid://cv51sfrsshs2n" path="res://addons/godotskeletontexture/assets/demo_character.tscn" id="2_i44ic"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_vn6ed")
 
-[node name="GDExample" type="GDExample" parent="."]
-position = Vector2(0.0398526, 13.1999)
-texture = ExtResource("1_skuhd")
-centered = false
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.15782, 5.17126)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="Root Scene" parent="." instance=ExtResource("2_i44ic")]
+
+[node name="Skeleton3D" parent="Root Scene/RootNode/Root" index="0"]
+bones/0/position = Vector3(0.00204209, 0.0014881, 0.00193205)
+
+[editable path="Root Scene"]

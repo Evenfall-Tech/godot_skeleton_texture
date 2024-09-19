@@ -1,0 +1,45 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cl3wfx5nn478c"
+path="res://.godot/imported/characterMedium.fbx-4df0ebd98bfee1004a5a56c3522c7b56.scn"
+
+[deps]
+
+source_file="res://addons/godotskeletontexture/assets/character/characterMedium.fbx"
+dest_files=["res://.godot/imported/characterMedium.fbx-4df0ebd98bfee1004a5a56c3522c7b56.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:RootNode/Root/Skeleton3D": {
+"rest_pose/external_animation_library": null,
+"rest_pose/load_pose": 1,
+"rest_pose/selected_animation": "Root|Jump"
+}
+}
+}
+fbx/importer=1
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

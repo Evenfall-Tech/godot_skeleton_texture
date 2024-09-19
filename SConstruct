@@ -17,8 +17,11 @@ sources = []
 sources += Glob("#plugin/src/cpp/*.cpp")
 
 if env["target"] in ["editor", "template_debug"]:
-  doc_data = env.GodotCPPDocData("#plugin/src/gen/doc_data.gen.cpp", source=Glob("doc_classes/*.xml"))
-  sources.append(doc_data)
+  try:
+    doc_data = env.GodotCPPDocData("#plugin/src/gen/doc_data.gen.cpp", source=Glob("doc_classes/*.xml"))
+    sources.append(doc_data)
+  except AttributeError:
+    print("Not including class reference as we're targeting a pre-4.3 baseline.")
 
 binary_path = '#demo/addons/godotskeletontexture/.bin'
 project_name = 'godotskeletontexture'
