@@ -32,6 +32,12 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
+"materials": {
+"skin": {
+"use_external/enabled": true,
+"use_external/path": "res://addons/godotskeletontexture/assets/character/Root_Material.tres"
+}
+},
 "nodes": {
 "PATH:RootNode/Root/Skeleton3D": {
 "rest_pose/external_animation_library": null,
