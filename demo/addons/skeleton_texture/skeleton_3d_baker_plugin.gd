@@ -25,7 +25,7 @@ func _on_force_regen_button_pressed(object : Skeleton3DBaker) -> void:
 
 	var anims = object.animations.get_animation_list()
 
-	var outputs = anims.map(map_output)
+	var outputs = map_output.call(anims[0]) #anims.map(map_output)
 
 	editor_fs.scan()
 	editor.free()
