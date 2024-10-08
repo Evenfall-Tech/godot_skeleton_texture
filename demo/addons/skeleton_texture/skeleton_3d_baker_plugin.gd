@@ -11,11 +11,21 @@ func _parse_category(object: Object, category: String) -> void:
 		add_custom_control(force_regen_button)
 
 func _on_force_regen_button_pressed(object : Skeleton3DBaker) -> void:
+	if not object._validate_state():
+		return
+
 	var editor = EditorPlugin.new()
 	var editor_fs = editor.get_editor_interface().get_resource_filesystem()
 
+	var map_output = func(anim : StringName) -> String:
+		if not object._validate_anim(anim):
+			return ""
+
+		return object._generate_anim(anim)
+
 	var anims = object.animations.get_animation_list()
-	var outputs = anims.map(object._generateAnim)
+
+	var outputs = anims.map(map_output)
 
 	editor_fs.scan()
 	editor.free()

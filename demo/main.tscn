@@ -51,9 +51,10 @@ bones/53/scale = Vector3(0.999987, 0.999999, 0.999999)
 bones/54/rotation = Quaternion(0.391448, 0.0105369, -0.166705, 0.904913)
 bones/55/rotation = Quaternion(-0.617624, 0.218594, 0.171985, 0.735649)
 
-[node name="Skeleton3DBaker" type="Node" parent="."]
+[node name="Skeleton3DBaker" type="Node" parent="." node_paths=PackedStringArray("mesh_instance")]
 script = ExtResource("3_etf4d")
 animations = ExtResource("4_wbb1f")
+mesh_instance = NodePath("../Root Scene/RootNode/Root/Skeleton3D/characterMedium")
 output_dir = "res://addons/skeleton_texture/assets"
 
 [editable path="Root Scene"]
